@@ -1,9 +1,9 @@
-# Talk - Conversor de Texto para Fala (TTS) via Linha de Comandos
+# Talk - Conversor de Texto para Voz (TTS) via Linha de Comandos
 
 [![Python](https://img.shields.io/badge/Python-3.7%2B-blue.svg)](https://www.python.org/)
 [![Powered by edge-tts](https://img.shields.io/badge/powered%20by-edge--tts-brightgreen)](https://github.com/rany2/edge-tts)
 
-`Talk` é uma ferramenta de linha de comandos simples e poderosa que converte texto em fala. Utiliza as vozes neurais de alta qualidade do serviço **Microsoft Edge TTS** e possui um mecanismo de _fallback_ para uma voz offline padrão, garantindo que a funcionalidade esteja sempre disponível, mesmo sem ligação à internet.
+`Talk` é uma ferramenta de linha de comandos simples e poderosa que converte texto em voz. Utiliza as vozes neurais de alta qualidade do serviço **Microsoft Edge TTS** e possui um mecanismo de _fallback_ para uma voz offline padrão, garantindo que a funcionalidade esteja sempre disponível, mesmo sem ligação à internet.
 
 ## ✨ Funcionalidades
 
@@ -26,7 +26,7 @@ Para utilizar o `Talk`, precisa de ter o **Python 3.7 ou superior** instalado no
 2.  **Crie um ambiente virtual (recomendado):**
     ```bash
     python -m venv venv
-    source venv/bin/activate  # No Windows: venv\Scripts\activate
+    venv\Scripts\activate  # Linux: source venv/bin/activate
     ```
 
 3.  **Instale as dependências:**
