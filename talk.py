@@ -25,7 +25,7 @@ def _play_offline_fallback(text: str, error_message: str):
         except RuntimeError:
             print("Aviso: Não foi possível obter as vozes do sistema. A usar a voz padrão.")
 
-        warning_message = "The neural voice is not available. Using a standard voice for playback."
+        warning_message = "A voz neural não está disponível. A utilizar uma voz padrão para a reprodução."
         print(f"A reproduzir aviso: {warning_message}")
         engine.say(warning_message)
         engine.runAndWait()

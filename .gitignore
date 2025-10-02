@@ -1,5 +1,6 @@
 build.txt
 *.spec
+*.bat
 /dist/
 /build/
 /__pycache__/
