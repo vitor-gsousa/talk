@@ -17,20 +17,23 @@
 
 Para utilizar o `Talk`, precisa de ter o **Python 3.7 ou superior** instalado no seu sistema.
 
-1.  **Clone o repositório:**
+1. **Clone o repositório:**
+
     ```bash
     git clone <URL_DO_SEU_REPOSITORIO_NO_GITHUB>
     cd talk
     ```
 
-2.  **Crie um ambiente virtual (recomendado):**
+2. **Crie um ambiente virtual (recomendado):**
+
     ```bash
     python -m venv venv
     venv\Scripts\activate  # Linux: source venv/bin/activate
     ```
 
-3.  **Instale as dependências:**
+3. **Instale as dependências:**
     O projeto inclui um ficheiro `requirements.txt` com todas as bibliotecas necessárias. Instale-as com o seguinte comando:
+
     ```bash
     pip install -r requirements.txt
     ```
@@ -52,11 +55,13 @@ python talk.py "Olá mundo! Este é um teste de conversão de texto para fala."
 Pode usar o argumento `--voice` (ou `-v`) para escolher outra voz.
 
 **Exemplo com voz em Inglês (EUA):**
+
 ```bash
 python talk.py "Hello world! This is a text-to-speech conversion test." --voice "en-US-AriaNeural"
 ```
 
 **Exemplo com voz em Português (Brasil):**
+
 ```bash
 python talk.py "Oi, pessoal! Testando a voz brasileira." --voice "pt-BR-FranciscaNeural"
 ```
@@ -75,14 +80,18 @@ Copie o "Short name" da voz que deseja (ex: `pt-PT-RaquelNeural`) e use-o no seu
 
 O script está preparado para ser empacotado num único executável com o `PyInstaller`. Isto permite que o execute em qualquer máquina sem precisar de instalar o Python ou as dependências.
 
-1.  **Instale o PyInstaller:**
+1. **Instale o PyInstaller:**
+
     ```bash
     pip install pyinstaller
     ```
-2.  **Crie o executável:**
+
+2. **Crie o executável:**
+
     ```bash
     pyinstaller --onefile --noconsole talk.py
     ```
+
     O ficheiro final estará na pasta `dist`.
 
 ## 📄 Licença

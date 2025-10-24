@@ -5,3 +5,5 @@ build.txt
 /build/
 /__pycache__/
 /.venv/
+*.md
+*.log

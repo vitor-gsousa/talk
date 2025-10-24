@@ -5,7 +5,6 @@ import pygame
 import tempfile
 import os
 import pyttsx3
-import sys
 import aiohttp
 
 def _play_offline_fallback(text: str, error_message: str):
@@ -42,18 +41,9 @@ def _play_offline_fallback(text: str, error_message: str):
         # Em vez de SystemExit, podemos apenas notificar o erro.
         # raise SystemExit(1)
 
-def get_base_path():
-    """Obtém o caminho base para o executável ou script."""
-    if getattr(sys, 'frozen', False):
-        # Se estiver a correr como um executável PyInstaller
-        return os.path.dirname(sys.executable)
-    else:
-        # Se estiver a correr como um script normal
-        return os.path.abspath(".")
-
 async def generate_and_play_audio(text, voice):
-    # Criar um nome de ficheiro temporário único
-    temp_fd, temp_filename = tempfile.mkstemp(suffix=".mp3", dir=get_base_path())
+    # Criar um nome de ficheiro temporário único no directório temporário do sistema
+    temp_fd, temp_filename = tempfile.mkstemp(suffix=".mp3")
     os.close(temp_fd)  # Fechar o manipulador de ficheiro, precisamos apenas do nome
 
     try:
