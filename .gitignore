@@ -1,5 +1,7 @@
-build.txt
+.*txt
+!build.txt
 *.spec
+!talk.spec
 *.bat
 /dist/
 /build/
